@@ -4,4 +4,3 @@ From the [Skillfactory Data Science course](https://skillfactory.ru/data-scienti
 ## Проекты
 
 * [Проект 0. Игра: Угадай число](project_0)
-

@@ -10,6 +10,8 @@ def binary_search(hidden_number: int = 1) -> int:
     Returns:
         int: Counted attempts for win
     """
+    if not(1 <= hidden_number <= 100):
+        raise ValueError('Expected value from 1 to 100')
     
     interval = (1, 101) # mathematially half-open left-closed interval - [1, 101)
     max_attempts_to_panic = int(1 + log2(len(range(*interval))))

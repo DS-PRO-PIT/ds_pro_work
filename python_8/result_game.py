@@ -31,6 +31,7 @@ def binary_search(hidden_number: int = 1) -> int:
 
     raise RuntimeError('Algorithm working not like expected')
 
+
 def reveal_max_attempts(search_function,
                        number_of_repetitions: int = 1000) -> int:
     """Reveal max attempts count by calling several times with random hidden number
@@ -50,8 +51,32 @@ def reveal_max_attempts(search_function,
         
     max_attempt_count = max(*attempts_count)
     print(f'Search algorithm needs maximum {max_attempt_count} attempts count')
+
     return max_attempt_count
 
 
-#reveal_max_attempts(binary_search)
+def score_attempts(search_function,
+                   number_of_repetitions: int = 1000) -> int:
+    """Reveal arithmetic mean of attempts by calling several times with random hidden number
 
+    Args:
+        search_function (callable): Checking function
+        number_of_repetitions (int, optional): Number of repetitions to check. Defaults to 1000.
+
+    Returns:
+        int: Arithmetic mean of attempts
+    """
+    hidden_numbers = np.random.randint(1, 101, size=number_of_repetitions)
+    
+    attempts_count = []
+    for hidden_number in hidden_numbers:
+        attempts_count.append(search_function(hidden_number))
+
+    score = int(np.mean(attempts_count))
+    print(f'Search algorithm needs {score} attempts')
+    
+    return score
+
+
+#reveal_max_attempts(binary_search)
+#score_attempts(binary_search)

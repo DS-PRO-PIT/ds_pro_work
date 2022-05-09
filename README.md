@@ -1,5 +1,6 @@
-# My data science projects
-From the [Skillfactory Data Science course](https://skillfactory.ru/data-scientist-pro)
+# Проекты по Data Science
+
+Здесь собраны проекты, которые я выполняю в рамках обучения по курсу [Skillfactory Data Science](https://skillfactory.ru/data-scientist-pro).
 
 ## Проекты
 
